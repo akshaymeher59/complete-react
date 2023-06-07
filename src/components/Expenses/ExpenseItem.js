@@ -6,12 +6,10 @@ import Card from '../UI/Card';
 
 function ExpenseItem(props) {
 
- const [title, setTitle] = useState( 0);
-  const arr=  useState( 0);
-  console.log("Arr = "+arr);
+ const [title, setTitle] = useState( props.title );
+  
   const clickHandler= ()=>{
-    setTitle(title + 1);
-    console.log(title);
+    setTitle('updated');
   }
   
   return (
@@ -22,7 +20,7 @@ function ExpenseItem(props) {
         <h2>{title}</h2>
         <div className="expense-item__price">${props.amount}</div>
       </div>
-    <button onClick={ clickHandler } > </button>
+    <button onClick={ clickHandler } > Change</button>
     </Card>
   );
 }
