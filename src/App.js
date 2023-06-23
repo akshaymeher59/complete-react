@@ -34,8 +34,6 @@ const addExpenseHandler= (expense)=>{
   // setExpenses([expense, ...expenses]);
     
   setExpenses( (prevExpenses) => {
-    console.log('LEVEL!')
-    console.log(prevExpenses);
     return [expense, ...prevExpenses];
   });
 
